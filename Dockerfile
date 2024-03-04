@@ -14,6 +14,7 @@ RUN crontab -l | { cat; echo "0 0 * * * bash /root/clean.sh"; } | crontab -
 
 ADD ./app /var/www/html
 RUN mkdir -p /var/www/html/files
-RUN chmod +rw /var/www/html/files
+RUN chown -R www-data /var/www/html/files
+RUN chmod -R +755 /var/www/html/
 
 RUN cron
