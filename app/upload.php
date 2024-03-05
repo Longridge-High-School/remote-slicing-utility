@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Processing your File...</title>
+		<link rel = "stylesheet"  type = "text/css" href = "/style.css">
+		<link rel = "icon" href = "/img/icon.png">
+		<meta charset = "utf-8">
+    </head>
     <body>
+        <div class = "ProcessContainer">
+            <img src = "/img/spin.gif" alt = "Processing..." class = "Spin"></img>
+            <p><b>Slicing your model...</p></b>
+        </div>
         <?php
 
             if ($_SERVER ['REQUEST_METHOD'] === 'POST')
@@ -14,7 +24,7 @@
                     echo "<input type = 'hidden' name = 'path' value = '" . $path . "'/>";
                     echo "<input type = 'hidden' name = 'gcode' value = '" . $gcode . "'/>";
                     echo "</form>";
-                    echo "<script type = 'text/javascript'>//document.data.submit ();</script>";
+                    echo "<script type = 'text/javascript'>document.data.submit ();</script>";
                 }
                 else
                 {

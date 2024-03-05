@@ -1,0 +1,48 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Verdana";
+}
+
+main
+{
+	padding: 10px;
+}
+
+button, input
+{
+	font-size: 18px;
+}
+
+.OutputContainer
+{
+	background-color: #ebeaea;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+}
+
+.ProcessContainer
+{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	width: 100vw;
+	height: 20vh;
+	background-color: #ebeaea;
+	text-align: center;
+	margin: 0;
+	position: absolute;
+	top: 35vh;
+	transform: translateY (-35vh);
+}
+
+.Spin
+{
+	height: 15vh;
+}
+
+.Download
+{
+	background-color: #b8ff70;
+}
