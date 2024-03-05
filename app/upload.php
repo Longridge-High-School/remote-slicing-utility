@@ -10,20 +10,15 @@
 
                 if (move_uploaded_file ($_FILES ["uploadFile"]["tmp_name"], $path))
                 {
-                    echo "<form name = 'data' action = '/slice.php' method = 'POST'>
-                    <include type = 'hidden' name = 'path' value = '" . $path . "'>
-                    <include type = 'hidden' name = 'gcode' value = '" . $gcode . "'>
-                    </form>
-                    <script type = 'text/javascript'>
-                    document.data.submit ();
-                    </script>";
+                    echo "<form name = 'data' action = '/slice.php' method = 'POST'>";
+                    echo "<input type = 'hidden' name = 'path' value = '" . $path . "'/>";
+                    echo "<input type = 'hidden' name = 'gcode' value = '" . $gcode . "'/>";
+                    echo "</form>";
+                    echo "<script type = 'text/javascript'>//document.data.submit ();</script>";
                 }
                 else
                 {
-                    echo "<script type = 'text/javascript'>
-                    alert ('Sorry, there was an error uploading your file.');
-                    window.location.replace ('/index.html');
-                    </script>";
+                    echo "<script type = 'text/javascript'>alert ('Sorry, there was an error uploading your file.');window.location.replace ('/index.html');</script>";
                 }
             }
             else
