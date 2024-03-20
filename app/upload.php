@@ -23,6 +23,9 @@
                     echo "<form name = 'data' action = '/slice.php' method = 'POST'>";
                     echo "<input type = 'hidden' name = 'path' value = '" . $path . "'/>";
                     echo "<input type = 'hidden' name = 'gcode' value = '" . $gcode . "'/>";
+                    echo "<input type = 'hidden' name = 'infill' value = '" . htmlspecialchars ($_POST ["infill"]) . "'/>";
+                    echo "<input type = 'hidden' name = 'brimSeparation' value = '" . htmlspecialchars ($_POST ["brimSeparation"]) . "'/>";
+                    echo "<input type = 'hidden' name = 'brimWidth' value = '" . htmlspecialchars ($_POST ["brimWidth"]) . "'/>";
                     echo "</form>";
                     echo "<script type = 'text/javascript'>document.data.submit ();</script>";
                 }
