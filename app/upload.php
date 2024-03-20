@@ -26,6 +26,7 @@
                     echo "<input type = 'hidden' name = 'infill' value = '" . htmlspecialchars ($_POST ["infill"]) . "'/>";
                     echo "<input type = 'hidden' name = 'brimSeparation' value = '" . htmlspecialchars ($_POST ["brimSeparation"]) . "'/>";
                     echo "<input type = 'hidden' name = 'brimWidth' value = '" . htmlspecialchars ($_POST ["brimWidth"]) . "'/>";
+                    echo "<input type = 'hidden' name = 'advanced' value = '" . stripslashes (htmlspecialchars ($_POST ["advanced"])) . "'/>";
                     echo "</form>";
                     echo "<script type = 'text/javascript'>document.data.submit ();</script>";
                 }

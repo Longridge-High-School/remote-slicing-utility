@@ -16,7 +16,7 @@
 
                         if ($_SERVER ['REQUEST_METHOD'] === 'POST')
                         {        
-                            $options = "--support-material --fill-pattern honeycomb --fill-density " . htmlspecialchars ($_POST ["infill"]) . "% --brim-separation "  . htmlspecialchars ($_POST ["brimSeparation"]) . " --brim-width "  . htmlspecialchars ($_POST ["brimWidth"]);
+                            $options = "--support-material --fill-pattern honeycomb --fill-density " . htmlspecialchars ($_POST ["infill"]) . "% --brim-separation "  . htmlspecialchars ($_POST ["brimSeparation"]) . " --brim-width " . htmlspecialchars ($_POST ["brimWidth"]) . " " . stripslashes (htmlspecialchars ($_POST ["advanced"]));
                             exec ("/opt/prusa/prusa-slicer -g " . htmlspecialchars ($_POST ["path"]) . " --load /opt/prusa/resources/profiles/Anycubic.ini " . $options, $output, $code); 
                                 
                             if ($code == 0)
