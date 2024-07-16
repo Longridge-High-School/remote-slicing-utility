@@ -23,6 +23,16 @@
                     echo "<form name = 'data' action = '/slice.php' method = 'POST'>";
                     echo "<input type = 'hidden' name = 'path' value = '" . $path . "'/>";
                     echo "<input type = 'hidden' name = 'gcode' value = '" . $gcode . "'/>";
+
+                    if (htmlspecialchars ($_POST ["supports"]) == "on")
+                    {
+                        echo "<input type = 'hidden' name = 'supports' value = '" . htmlspecialchars ($_POST ["supports"]) . "'/>";
+                    }
+                    else
+                    {
+                        echo "<input type = 'hidden' name = 'supports' value = 'off'/>";
+                    }
+
                     echo "<input type = 'hidden' name = 'infill' value = '" . htmlspecialchars ($_POST ["infill"]) . "'/>";
                     echo "<input type = 'hidden' name = 'brimSeparation' value = '" . htmlspecialchars ($_POST ["brimSeparation"]) . "'/>";
                     echo "<input type = 'hidden' name = 'brimWidth' value = '" . htmlspecialchars ($_POST ["brimWidth"]) . "'/>";
